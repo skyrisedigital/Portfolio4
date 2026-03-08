@@ -8,8 +8,7 @@
 
 <title>SkyRise Digital</title>
 
-<!-- FAVICON -->
-<link rel="icon" type="image/png" href="file_00000000deb471fd9274bae6c7c6aa34.png">
+<link rel="icon" href="file_00000000deb471fd9274bae6c7c6aa34.png">
 
 <style>
 
@@ -66,12 +65,6 @@ background:linear-gradient(120deg,#000,#111,#000);
 font-size:60px;
 color:#ffd700;
 text-shadow:0 0 30px #ffd700;
-animation: glow 3s infinite alternate;
-}
-
-@keyframes glow{
-from{ text-shadow:0 0 10px #ffd700;}
-to{ text-shadow:0 0 40px #ffd700;}
 }
 
 .hero p{
@@ -98,7 +91,7 @@ box-shadow:0 0 20px #ffd700;
 display:flex;
 justify-content:center;
 gap:60px;
-padding:50px;
+padding:60px;
 background:#080808;
 }
 
@@ -107,7 +100,7 @@ text-align:center;
 }
 
 .stat h3{
-font-size:40px;
+font-size:45px;
 color:#ffd700;
 }
 
@@ -115,7 +108,7 @@ color:#ffd700;
 color:#bbb;
 }
 
-/* SECTIONS */
+/* SERVICES */
 
 section{
 padding:90px 10%;
@@ -127,8 +120,6 @@ margin-bottom:50px;
 color:#ffd700;
 font-size:35px;
 }
-
-/* SERVICES */
 
 .services{
 display:flex;
@@ -224,12 +215,12 @@ border-top:1px solid #222;
 <div class="counter">
 
 <div class="stat">
-<h3>100+</h3>
+<h3 id="count1">0</h3>
 <p>Websites Built</p>
 </div>
 
 <div class="stat">
-<h3>50+</h3>
+<h3 id="count2">0</h3>
 <p>Happy Clients</p>
 </div>
 
@@ -272,11 +263,8 @@ border-top:1px solid #222;
 <div class="portfolio">
 
 <div class="project">Business Website</div>
-
 <div class="project">Startup Landing Page</div>
-
 <div class="project">Restaurant Website</div>
-
 <div class="project">Agency Website</div>
 
 </div>
@@ -287,12 +275,19 @@ border-top:1px solid #222;
 
 <h2>Start Your Project</h2>
 
-<p>Email us to start your website</p>
+<p>Contact us to build your website</p>
 
-<a href="mailto:skyrisedigital00@gmail.com?subject=Website%20Project"
-class="btn">
+<a href="mailto:skyrisedigital00@gmail.com" class="btn">
 
 Send Email
+
+</a>
+
+<br><br>
+
+<a href="https://instagram.com/skyrisedigital" class="btn">
+
+Instagram
 
 </a>
 
@@ -303,6 +298,367 @@ Send Email
 <p>© 2026 SkyRise Digital</p>
 
 </footer>
+
+<script>
+
+let count1 = 0;
+let count2 = 0;
+
+let counter1 = setInterval(function(){
+
+count1++;
+document.getElementById("count1").innerText = count1;
+
+if(count1 == 100){
+clearInterval(counter1);
+}
+
+},30);
+
+let counter2 = setInterval(function(){
+
+count2++;
+document.getElementById("count2").innerText = count2;
+
+if(count2 == 50){
+clearInterval(counter2);
+}
+
+},40);
+
+</script>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SkyRise Digital</title>
+
+<link rel="icon" href="file_00000000deb471fd9274bae6c7c6aa34.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:18px;
+background:#000;
+border-bottom:1px solid #222;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+/* LOGO */
+
+header{
+text-align:center;
+padding:40px;
+}
+
+.logo img{
+height:120px;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(120deg,#000,#111,#000);
+}
+
+.hero h1{
+font-size:60px;
+color:#ffd700;
+text-shadow:0 0 30px #ffd700;
+}
+
+.hero p{
+font-size:22px;
+margin-top:20px;
+color:#ccc;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+background:#ffd700;
+color:black;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 20px #ffd700;
+}
+
+/* COUNTER */
+
+.counter{
+display:flex;
+justify-content:center;
+gap:60px;
+padding:60px;
+background:#080808;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h3{
+font-size:45px;
+color:#ffd700;
+}
+
+.stat p{
+color:#bbb;
+}
+
+/* SERVICES */
+
+section{
+padding:90px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:50px;
+color:#ffd700;
+font-size:35px;
+}
+
+.services{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.card{
+background:#111;
+padding:35px;
+width:260px;
+border-radius:15px;
+text-align:center;
+border:1px solid #222;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #ffd700;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.project{
+background:#111;
+padding:25px;
+width:240px;
+border-radius:10px;
+text-align:center;
+border:1px solid #222;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:30px;
+text-align:center;
+border-top:1px solid #222;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<header>
+
+<div class="logo">
+
+<img src="file_00000000deb471fd9274bae6c7c6aa34.png">
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>SkyRise Digital</h1>
+
+<p>We Build Premium Websites For Growing Businesses</p>
+
+<a href="#contact" class="btn">Start Your Project</a>
+
+</section>
+
+<!-- COUNTER -->
+
+<div class="counter">
+
+<div class="stat">
+<h3 id="count1">0</h3>
+<p>Websites Built</p>
+</div>
+
+<div class="stat">
+<h3 id="count2">0</h3>
+<p>Happy Clients</p>
+</div>
+
+<div class="stat">
+<h3>5★</h3>
+<p>Client Rating</p>
+</div>
+
+</div>
+
+<section id="services">
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Business Websites</h3>
+<p>Professional websites for companies.</p>
+</div>
+
+<div class="card">
+<h3>Landing Pages</h3>
+<p>High converting pages for startups.</p>
+</div>
+
+<div class="card">
+<h3>Website Redesign</h3>
+<p>Upgrade your old website with modern design.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="portfolio">
+
+<h2>Portfolio</h2>
+
+<div class="portfolio">
+
+<div class="project">Business Website</div>
+<div class="project">Startup Landing Page</div>
+<div class="project">Restaurant Website</div>
+<div class="project">Agency Website</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Start Your Project</h2>
+
+<p>Contact us to build your website</p>
+
+<a href="mailto:skyrisedigital00@gmail.com" class="btn">
+
+Send Email
+
+</a>
+
+<br><br>
+
+<a href="https://instagram.com/skyrisedigital" class="btn">
+
+Instagram
+
+</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 SkyRise Digital</p>
+
+</footer>
+
+<script>
+
+let count1 = 0;
+let count2 = 0;
+
+let counter1 = setInterval(function(){
+
+count1++;
+document.getElementById("count1").innerText = count1;
+
+if(count1 == 100){
+clearInterval(counter1);
+}
+
+},30);
+
+let counter2 = setInterval(function(){
+
+count2++;
+document.getElementById("count2").innerText = count2;
+
+if(count2 == 50){
+clearInterval(counter2);
+}
+
+},40);
+
+</script>
 
 </body>
 
